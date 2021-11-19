@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="js_trainings.asyncawait" name="Web layout">&lt;!DOCTYPE html&gt;
+        <html>
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+                <title t-esc="title or 'Odoo'"/>
+                <link type="image/x-icon" rel="shortcut icon" href="/web/static/src/img/favicon.ico"/>
+                <link rel="stylesheet" href="/js_trainings/static/main.css"/>
+                <script type="text/javascript" src="/js_trainings/static/asyncawait.js"/>
+            </head>
+            <body class="main_page" onload="loadForm()">
+                <div class="main">
+                    <h2>Async / Await</h2>
+                    <form action="/jstest/asyncawait" method="get">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div>
+                            <label for="name">Company Name</label>
+                            <input type="text" name="name"/>
+                        </div>
+                        <div>
+                            <label for="country_id">Country</label>
+                            <select name="country_id"></select>
+                        </div>
+                        <div>
+                            <label for="team_id">Industry</label>
+                            <select name="team_id"></select>
+                        </div>
+                        <div>
+                            <label for="business_type">Business Type</label>
+                            <select name="business_type">
+                                <option value="individual">Individual</option>
+                                <option value="company">Company</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="loading"></div>
+            </body>
+        </html>
+    </template>
+</odoo>

@@ -1,0 +1,27 @@
+div.main {
+	width: 30%;
+	margin-right: auto;
+	margin-left: auto;
+	vertical-align: middle;
+	background-color: #ddd;
+}
+div.main label, div.main input, div.main select, div.main button {
+	margin: 10px;
+}
+body.main_page a {
+	margin-top: 20px;
+}
+
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(192, 192, 192, 0.5);
+  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
